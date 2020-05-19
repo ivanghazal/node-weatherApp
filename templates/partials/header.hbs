@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+
+<div class="mainmenu_containers">
+    <ul>
+        <li id="home"><a href="../"  >Home</a></li>
+        <li id="about"><a href="about">About</a></li>
+        <li id="help"><a href="help">Help</a></li>
+    </ul>
+</div>
+
+<script >
+    if (window.location.href.indexOf("about") != -1){
+      //  alert('{{title}}')
+        console.log('about')
+        document.getElementById("about").style.background = "blue";
+    }else if (window.location.href.indexOf("help") != -1){
+        document.getElementById("help").style.background = "blue";
+    }else{
+        document.getElementById("home").style.background = "blue";
+    }
+
+    console.log(window.location.href.indexOf("about"))
+
+
+</script>

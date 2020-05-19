@@ -1,0 +1,21 @@
+h1{
+    color: cadetblue;
+}
+
+
+.mainmenu_containers{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mainmenu_containers ul{
+    list-style: none;
+    clear: both;
+}
+.mainmenu_containers ul li{
+    display: inline;
+    margin-right: 100px;
+}
+.mainmenu_containers ul li a{
+    color: gray;
+}
