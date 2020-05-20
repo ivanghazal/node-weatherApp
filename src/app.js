@@ -4,6 +4,7 @@ const hbs = require('hbs')  //partials
 
 const app = express()
 
+const port = process.env.PORT || 3000
 
 //const request = require('request')
 const gecode = require('./utils/gecode')
@@ -67,7 +68,6 @@ app.get('/weather', (req, res) => {
         // console.log('------------Data',data)
         weatherResult(latitude,longitude , location ,function (error,data2){
             if (error) {
-                //console.log('Error', error)
                 res.send({'error': error})
                 return
             }
@@ -78,7 +78,6 @@ app.get('/weather', (req, res) => {
                 address: req.query.address
 
             })
-
         })
     })
 
@@ -120,6 +119,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port '+ port)
 })
